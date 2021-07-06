@@ -1,5 +1,3 @@
-console.log("This is loaded from client page");
-
 function fetchWeatherInfo() {
 	const address = document.getElementById("address").value;
 	const messageText1 = document.getElementById("message-1");
