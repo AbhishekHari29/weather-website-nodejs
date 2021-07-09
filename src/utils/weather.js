@@ -19,7 +19,8 @@ const weather = (latitude, longitude, callback) => {
 			callback("Unable to find weather information", undefined);
 		} else {
 			const temp = body.current.temp;
-			callback(undefined, { temp });
+			const desc = body.current.weather[0].description;
+			callback(undefined, { temp, desc });
 		}
 	});
 };

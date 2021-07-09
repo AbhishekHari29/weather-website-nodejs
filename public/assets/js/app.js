@@ -18,7 +18,7 @@ function fetchWeatherInfo() {
 			if (data.error) {
 				messageText1.textContent = data.error;
 			} else {
-				messageText1.textContent = data.temp;
+				messageText1.textContent = data.temp + ", " + data.desc;
 				messageText2.textContent = data.placeName;
 			}
 		});

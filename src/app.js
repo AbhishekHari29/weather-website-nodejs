@@ -45,11 +45,11 @@ app.get("/weather", (req, res) => {
 		if (error) {
 			res.send({ error });
 		} else {
-			weather(latitude, longitude, (error, { temp } = {}) => {
+			weather(latitude, longitude, (error, { temp, desc } = {}) => {
 				if (error) {
 					res.send({ error });
 				} else {
-					res.send({ placeName, temp });
+					res.send({ placeName, temp, desc });
 				}
 			});
 		}
