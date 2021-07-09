@@ -10,7 +10,7 @@ function fetchWeatherInfo() {
 	messageText1.textContent = "Loading";
 	messageText2.textContent = "";
 
-	const url = "http://localhost:3000/weather?address=" + address;
+	const url = "/weather?address=" + address;
 
 	fetch(url).then((res) => {
 		res.json().then((data) => {
